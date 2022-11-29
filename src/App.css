@@ -36,14 +36,13 @@
 }
 
 .Nav {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  height: 40px;
+  width: 100vw;
+  display: flex;
   background-color: #282c34;
-  
+  color: azure;
 }
 
 .Nav a{
@@ -52,3 +51,23 @@
 
 }
 
+.hamburger {
+  padding-left: 5px;
+}
+
+.hamburger :hover{
+  cursor: pointer;
+}
+
+.active {
+  display: flex;
+  width: 100vw;
+  visibility: hidden;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.link-item{
+  padding: 5px;
+}

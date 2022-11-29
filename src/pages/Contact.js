@@ -3,10 +3,10 @@ import '../App.css';
 
 
 
-function Home() {
+function Contact() {
   return (
-    <div className="Home">
-      HERO PAGE
+    <div className="Contact">
+      CONTACT
     <div> Information card about company </div>
     <div> parallax background</div>
 
@@ -15,4 +15,4 @@ function Home() {
 }
 
 
-export default Home;
+export default Contact;

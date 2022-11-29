@@ -3,10 +3,14 @@ import '../App.css';
 
 
 
-function Home() {
+function About() {
   return (
-    <div className="Home">
-      HERO PAGE
+    <div className="About">
+      ABOUT
+      INFO ABOUT HOW THE OWNER
+      PORTFOLIO Link
+      BLOG
+      PERSONAL PROJECTS
     <div> Information card about company </div>
     <div> parallax background</div>
 
@@ -15,4 +19,4 @@ function Home() {
 }
 
 
-export default Home;
+export default About;

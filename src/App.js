@@ -8,6 +8,8 @@ import {
 
 import Nav from './nav.js';
 import Home from './pages/Home.js';
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 
 import Tetris from './components/Tetris';
@@ -18,8 +20,16 @@ const App = () => (
   <Nav />
     <Routes>
 
+      <Route path="/about" element={<About />}>
+      </Route>
+
       <Route path="/" element={<Home />}>
       </Route>
+
+      <Route path="/contact" element={<Contact />}>
+      </Route>
+
+
 
       <Route path="/tetris" element={<Tetris />}>
       </Route>
