@@ -28,7 +28,6 @@ export default class Nav extends React.Component {
       <Link className='link-item'  to="/">Home</Link>
       <Link className='link-item'  to="/About">About</Link>
       <Link className='link-item'  to="/Contact">Contact</Link>
-      <Link className='link-item'  to="/Tetris">Tetris</Link>    
 </div>
       </div>
   )

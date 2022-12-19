@@ -5,23 +5,44 @@ import '../App.css';
 function Contact() {
   return (
     <div className="Contact">
-      <ul>CONTACT</ul>
-      <ul>Address:
+
+    <div className='background'> 
+        <div className='home-wrapper'>
+      <ul>
+      CONTACT:
+      <br />
+      Address:
       88853 Highway 9 Lineville Al 36266
-      </ul>
-      <ul>Phone Number
+      <br />
+
+      <br />
+
+      Phone Number
       (256) - 203 - 4240
-      </ul>
-      <ul>Business Hours
+      <br />
+
+      <br />
+
+      Business Hours
       Mon - Friday 11 am - 6pm
-      </ul>
-      <ul>Emails
+      <br />
+      <br />
+
+      Email
+      <br />
+
       chris@terratechsolutions.com
-      </ul>
-      <ul>    
-        <ul> Across the street from Retrac </ul>
-    <div className='background'> Parallax background </div>
+      kassandria@terratechsolutions.com
+      <br />
+      <br />
+
+          
+      Highway 9 Across the street from Retrac 
     </ul>
+    </div>
+    
+    
+    </div>
     </div>
   )
 }

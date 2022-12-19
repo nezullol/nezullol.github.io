@@ -1,32 +1,48 @@
 import '../App.css';
-
+import { Link } from 'react-router-dom';
 
 
 function About() {
   return (
     <div className="About">
-      <ul> 
-
-<ul>ABOUT 
-
-<br/>
-
-Hi im chris (the OWNER) this is a little about me and my background and expertise
-<br/>
-<br/>
-
-</ul>
 
 
-<ul>PERSONAL PROJECTS</ul>
-<ul>INFO ABOUT HOW THE OWNER</ul>
-<ul>PORTFOLIO Link</ul>
-<ul>BLOG</ul>
-      </ul>
-<ul>
+<div className='background'>
+<div className='home-wrapper'>
 
-    <ul> parallax background</ul>
-</ul>
+      
+
+ABOUT ME
+<br />
+<br />
+
+Hello My name is Chris
+<br />
+I dont just fix computers, this is what im up to in my down time.
+
+<br />
+
+
+<br />
+<br />
+
+PERSONAL PROJECTS:
+<Link className='link'  to="/Tetris">Tetris</Link>    
+<a className='link' href='https://github.com/nezullol'>
+PORTFOLIO Link
+</a>
+<a className='link' href='https://github.com/nezullol'>
+Blog
+</a>      
+
+
+
+
+</div>
+
+</div>
+
+
 
     </div>
   )

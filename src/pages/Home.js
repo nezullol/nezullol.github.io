@@ -1,10 +1,17 @@
 import '../App.css';
-
-
+import hello from "../img/hello.jpg"
 
 function Home() {
   return (
-    <div className="Home">
+    <div className="Home"> 
+
+
+    <div className='background-wrapper'> 
+
+    <div className='background' >
+
+    <div className='home-wrapper' >
+
       <div className='title'>
       Terra Tech
       <div className='subtitle'>Computer and mobile device repair</div>
@@ -17,7 +24,13 @@ function Home() {
      <div className='card-wrapper'>We build servers</div>
      <div className='card-wrapper'>We repair networks</div>
 
-    <div className='background'> parallax background</div>
+    </div>
+
+
+    </div>
+
+    
+    </div>
 
     </div>
   )
