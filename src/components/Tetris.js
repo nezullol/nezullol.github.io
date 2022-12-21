@@ -13,6 +13,7 @@ import { useStage } from '../hooks/useStage'
 import Stage from './Stage';
 import Display from './Display';
 import StartButton from './StartButton';
+import Arrows from './Arrows';
 
 const Tetris = () => {
     const[dropTime,setDropTime] = useState(null);
@@ -22,7 +23,7 @@ const Tetris = () => {
     const[stage, setStage, rowsCleared] = useStage(player,resetPlayer);
     const[score, setScore, rows, setRows, level, setLevel] = useGameStatus(rowsCleared)
 
-    console.log( 'Re-render');
+    
 
     const movePlayer = dir => {
         if (!checkCollision(player, stage,{x: dir, y: 0})) {
@@ -40,7 +41,7 @@ const Tetris = () => {
         setRows(0);
         setLevel(0);
     }
-
+    
     const drop = () =>{
         if (rows > (level + 1) * 10) {
             setLevel(prev => prev + 1);
@@ -90,6 +91,23 @@ const Tetris = () => {
         }
     }
 
+    const moveLeft = () =>{
+        
+            movePlayer(-1)
+        
+    }
+    const moveRight = () =>{
+        
+        movePlayer(1)
+    
+}
+const Rotate= () =>{
+        
+    playerRotate(stage, 1);
+
+
+}
+
     useInterval (() =>{
         drop()
     }, dropTime)
@@ -99,7 +117,9 @@ const Tetris = () => {
             role="button"
             tabIndex="0" 
             onKeyDown={e =>move(e) } 
-            onKeyUp = {e => keyUp(e) }>
+            onKeyUp = {e => keyUp(e) }
+            onClick = {e => move(e)}
+            >
 
             <StyledTetris>
                 <Stage stage={stage}/>
@@ -115,7 +135,11 @@ const Tetris = () => {
                         }`}/>
                     </div>  
                     )}
-                    <StartButton callback={startGame}/>            
+                    <StartButton callback={startGame}/> 
+                    <Arrows callback={moveLeft} / >         
+                    <Arrows callback={moveRight} />            
+                    <Arrows callback={drop} />            
+                    <Arrows callback={Rotate} />            
                 </aside>
             </StyledTetris>
         </StyledTetrisWrapper>
