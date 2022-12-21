@@ -13,8 +13,7 @@ import { useStage } from '../hooks/useStage'
 import Stage from './Stage';
 import Display from './Display';
 import StartButton from './StartButton';
-import Arrows from './Arrows';
-
+import { StyledButton } from './styles/StyledButton';
 const Tetris = () => {
     const[dropTime,setDropTime] = useState(null);
     const[gameOver, setGameOver] = useState(false);
@@ -122,6 +121,19 @@ const Rotate= () =>{
             >
 
             <StyledTetris>
+                    <div className='moveButtons'>
+                    <StyledButton onClick={Rotate} >Rotate</StyledButton> 
+                    <div className='leftright'>
+                    <div className='left'>
+
+                    <StyledButton onClick={moveLeft}>Left</StyledButton>        
+                    </div>
+                    <div className='right'>
+                    <StyledButton onClick={moveRight}>Right</StyledButton>        
+                    </div>
+                    </div>
+                    <StyledButton onClick={drop}>Down</StyledButton> 
+                    </div>
                 <Stage stage={stage}/>
                 <aside>
                     {gameOver ? (
@@ -136,10 +148,8 @@ const Rotate= () =>{
                     </div>  
                     )}
                     <StartButton callback={startGame}/> 
-                    <Arrows callback={moveLeft} / >         
-                    <Arrows callback={moveRight} />            
-                    <Arrows callback={drop} />            
-                    <Arrows callback={Rotate} />            
+
+
                 </aside>
             </StyledTetris>
         </StyledTetrisWrapper>

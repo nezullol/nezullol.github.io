@@ -102,3 +102,22 @@ a.link {
   color: rgb(7, 204, 161);
   text-decoration: none;
 }
+
+.moveButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 25vh;
+  padding-right: 20px;
+}
+
+.leftright {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.left {
+  padding-right: 10px;
+}
